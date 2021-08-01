@@ -83,7 +83,7 @@ void sensorAlto(float cm){ //função que ativa os 'beeps', recebe o retorno da 
     contadorPausaAlto.start(pausa1); //inicia o contador da pausa
     if (contadorPausaAlto.elapsed()){ //quando o contador da pausa termina:
       contadorDuracaoAlto.start(duracao1); //o contador da duração inicia
-      tone(pinoBuzzerAlto, frequencia1); //o buzzer é ativado em determinadio frequência
+      tone(pinoBuzzerAlto, frequencia1); //o buzzer é ativado em determinada frequência
       digitalWrite(pinoVibracaoAlto, HIGH); //o motor de vibração é acionado
       if(contadorDuracaoAlto.elapsed()) { //quando contador da duração termina:
         noTone(pinoBuzzerAlto); //o buzzer é desativado
@@ -172,6 +172,7 @@ void sensorBaixo(float cm2){
       }
     }
   }
+  
   if (cm2 >= 90 && cm2<= 110){ //distância4: 90-110cm
     contadorPausaBaixo.start(pausa4);
     if (contadorPausaBaixo.elapsed()){
